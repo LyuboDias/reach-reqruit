@@ -1,3 +1,4 @@
+const fetch = require('node-fetch');
 /**
  * Fetch and return information about LukeSkywalker from this endpoint: https://swapi.dev/api/people/1/
 
@@ -35,5 +36,15 @@ The expected output is:
  */
 
 module.exports = async function fetchLukeSkywalker() {
-  // TODO
+  const url = 'https://swapi.dev/api/people/1/';
+
+  async function fetchLuke() {
+    const response = await fetch(url);
+    // waits until the request completes...
+
+    let data = await response.json();
+
+    return data;
+  }
+  return fetchLuke();
 };

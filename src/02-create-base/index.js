@@ -4,5 +4,14 @@
 // Explain:
 
 module.exports = function createBase(integer) {
-  // TODO
+  //~TODO  save integer as base depend on  what function is called
+
+  let base = integer;
+  let addTen = function (n) {
+    return n + base;
+  };
+  let subtractTwenty = function (n) {
+    return n - base;
+  };
+  return addTen, subtractTwenty;
 };
