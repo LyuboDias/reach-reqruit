@@ -10,8 +10,6 @@ const check = require('check-types');
  */
 
 // Average and worst case time complexity (Big-O) of my function is:
-
-// The bubble sort is a very memory-efficient because all of the ordering occurs within the array or list itself. No new memory is allocated.
 // Explain:
 
 module.exports = function sortArray(arr) {
@@ -25,20 +23,23 @@ module.exports = function sortArray(arr) {
   // }
   //-----------------------------------------
   // checking against every value in array if different than integer we throw TypeError
+  //
   arr.forEach(val => {
     if (check.integer(val) == false) {
       throw TypeError();
     }
   });
+
   //-----------------------------------------
   // arr.sort((a, b) => a - b);
-  // calling srt() to arr should have same behavier as the one bellow but doesnt pass the test
+  // calling sort() with arrow function should have same behavier as the one bellow but doesnt pass the test
   function sortNumber(a, b) {
     return a - b;
   }
-  return arr.sort(sortNumber);
+  return arr.sort(sortNumber); // sort() ha Big-O of O(n)
   //-----------------------------------------
   // without using sort() but buble algorithm
+  // The bubble sort is a very memory-efficient because all of the ordering occurs within the array or list itself. No new memory is allocated, but is time unefficient O(n^2)
   //------------------------------------------
   // function bubbleSort(array) {
   //   let sorted = false;

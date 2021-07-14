@@ -5,7 +5,7 @@
  */
 
 // Average and worst case time complexity (Big-O) of my function is:
-// Explain:
+// Explain: Iterating, copying and reversing an array takes linear time O(n), if we don't intend to do  O(n)  accesses to the reversed array we can create "reversed_array" object taht takes array as an argument,all we do is override the usual array accessing or slicing methods to replace any index  i  with the index  n - i. This wrapper methodology saves a one-time O(n) task and replaces it by  O(1)
 
 module.exports = function reverseWordsInSentence(input) {
   //return direct the input with chained all methods together
