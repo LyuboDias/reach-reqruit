@@ -44,26 +44,6 @@ module.exports = async function fetchLukeSkywalker() {
     }
     let data = await response.json();
 
-    // let luke = {
-    //   birth_year: data['birth_year'],
-    //   created: data.created,
-    //   edited: data.edited,
-    //   eye_color: data['eye_color'],
-    //   films: data.films,
-    //   gender: data.gender,
-    //   hair_color: data['hair_color'],
-    //   height: data.height,
-    //   homeworld: data.homeworld,
-    //   mass: data.mass,
-    //   name: data.name,
-    //   skin_color: data['skin_color'],
-    //   species: data.species,
-    //   starships: data.starships,
-    //   url: data.url,
-    //   vehicles: data.vehicles,
-    // };
-
-    // console.log(luke);
     return data;
   }
 
